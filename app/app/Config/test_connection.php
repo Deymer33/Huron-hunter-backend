@@ -1,14 +1,14 @@
 <?php
 
 require_once __DIR__ . '/../../vendor/autoload.php';
-use App\Config\Conection;
+use App\Config\Connection;
 
 
 echo "Intentando conectar a la base de datos...\n";
 
 try {
-    $dbConnection = new Conection();
-    $pdo = $dbConnection->getConection();
+    $dbConnection = new Connection();
+    $pdo = $dbConnection->getConnection();
 
     if ($pdo instanceof PDO) {
         echo "¡Conexión exitosa a la base de datos!\n";
