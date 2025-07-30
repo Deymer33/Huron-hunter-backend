@@ -20,7 +20,7 @@ class Connection {
             $password = $_ENV['DB_PASSWORD'];
 
             try {
-                $dsn = "mysql:host={$host};dbname={$namedb};charset=utf8mb4";
+                $dsn = "mysql:host=127.0.0.1;dbname={$namedb};charset=utf8mb4";
                 self::$conn = new PDO($dsn, $user, $password);
                 self::$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             } catch (PDOException $e) {

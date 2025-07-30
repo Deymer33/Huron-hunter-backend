@@ -1,12 +1,12 @@
 <?php
-require_once __DIR__ . '/../../vendor/autoload.php';
 
+namespace App\Controllers;
 
 use App\Controllers\AbstractController;
 use App\Models\CategoriesModel;
 
 class CategoriesController extends AbstractController {
-    protected function handleRequest(){
+    public function handleRequest(){
         $this->getCategories();
     }
 
