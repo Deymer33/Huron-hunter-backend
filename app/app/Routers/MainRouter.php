@@ -48,6 +48,15 @@ class MainRouter {
                 }
                 break;
 
+            case '/importar':
+                if ($requestMethod === 'GET') {
+                    require_once __DIR__ . '/../importacion.php';
+                } else {
+                    $this->methodNotAllowed(['GET']);
+                }
+                break;
+
+
             default:
                 $this->notFound();
                 break;
